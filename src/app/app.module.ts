@@ -14,16 +14,20 @@ import { ServerElementComponent } from './server-element/server-element.componen
 import { GameControlComponent } from './game-control/game-control.component';
 import { EvenComponent } from './even/even.component';
 import { OddComponent } from './odd/odd.component';
-
+import { DropdownDirective } from './shared/dropdown.directive';
+import {RecipeService} from './recipes/recipe.service';
+import {ShoppingService} from './shopping-list/shopping.service';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent, ShoppingListComponent, ShoppingEditComponent, CockpitComponent, ServerElementComponent, GameControlComponent, EvenComponent, OddComponent
+    AppComponent, HeaderComponent, RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent,
+    ShoppingListComponent, ShoppingEditComponent, CockpitComponent, ServerElementComponent, GameControlComponent, EvenComponent,
+    OddComponent, DropdownDirective
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [RecipeService,ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
